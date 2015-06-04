@@ -1,0 +1,12 @@
+log.cpp: In function ‘int test()’:
+log.cpp:124:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  char *buf = "hello world!\n";
+              ^
+/tmp/ccpjWS6x.o: In function `LOG::append(std::string)':
+log.cpp:(.text+0xf2): undefined reference to `sem_post'
+log.cpp:(.text+0x156): undefined reference to `sem_post'
+/tmp/ccpjWS6x.o: In function `thread(void*)':
+log.cpp:(.text+0x2be): undefined reference to `sem_wait'
+/tmp/ccpjWS6x.o: In function `main':
+log.cpp:(.text+0x38f): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
