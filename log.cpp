@@ -11,7 +11,7 @@
 #include <sys/time.h>
 #include <pthread.h>
 #include <unistd.h>
-
+#include <time.h>
 
 LOG::LOG()
 {
@@ -96,9 +96,19 @@ void *thread(void *arg)
 	}
 }
 
-int main()
+void testtime()
 {
-	LOG log;
+	time_t t;
+	struct tm *tm1;
+	time(&t);
+	tm1 = localtime(&t);
+	printf("%d-%d-%d %d:%d:%d\n", 1900 + tm1->tm_year, 1 + tm1->tm_mon, tm1->tm_mday, tm1->tm_hour, tm1->tm_min, tm1->tm_sec);
+//	printf("%s", asctime(tm1));
+}
+
+void testlog()
+{
+		LOG log;
 	string str("hello world!\n");
 	int arg1 = 1;
 	pthread_t th;
@@ -106,7 +116,6 @@ int main()
 	int ret = pthread_create( &th, NULL, thread, &log );  
 	if( ret != 0 ){  
 		printf( "Create thread error!\n");  
-		return -1; 
 	} 
 
 //for(int i = 0; i < 5; ++i)
@@ -121,6 +130,11 @@ int main()
 	}
 
 //	pthread_join( th, (void**)&thread_ret ); 
+}
+
+int main()
+{
+	testtime();
 
 	return 0;
 }
