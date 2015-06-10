@@ -4,20 +4,39 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-InClosingSockets	server.cpp	/^bool InClosingSockets(int sockfd)$/;"	f
+LOG	log.cpp	/^LOG::LOG()$/;"	f	class:LOG
+LOG	log.h	/^class LOG$/;"	c
 MAX_CONN_NUM	server.cpp	29;"	d	file:
 MAX_EVENT_NUMBER	server.cpp	26;"	d	file:
 TCP_BUFFER_SIZE	server.cpp	27;"	d	file:
 UDP_BUFFER_SIZE	server.cpp	28;"	d	file:
+_LOG_H_	log.h	8;"	d
 actSockets	server.cpp	/^deque<int> actSockets;$/;"	v
-addfd	server.cpp	/^void addfd( int epollfd, int fd )$/;"	f
+addfd	server.cpp	/^void addfd( int epollfd, int fd, bool oneshot)$/;"	f
 alock	server.cpp	/^pthread_mutex_t alock;         $/;"	v
+append	log.cpp	/^void LOG::append(string str)$/;"	f	class:LOG
+buf	log.h	/^		deque<string> buf, buf1;$/;"	m	class:LOG
+buf1	log.h	/^		deque<string> buf, buf1;$/;"	m	class:LOG
 closingSocketLock	server.cpp	/^pthread_mutex_t closingSocketLock;$/;"	v
 closingSockets	server.cpp	/^deque<int> closingSockets;$/;"	v
+flag	log.h	/^		bool flag;$/;"	m	class:LOG
+fp	log.h	/^		FILE *fp;$/;"	m	class:LOG
+isWriting	log.h	/^		bool isWriting;$/;"	m	class:LOG
+logThread	log.cpp	/^void *logThread(void *arg)$/;"	f
+main	log.cpp	/^int main()$/;"	f
 main	server.cpp	/^int main( int argc, char* argv[] )$/;"	f
 maxConnNum	server.cpp	/^int maxConnNum = 0;$/;"	v
 num	server.cpp	/^int num = 0;$/;"	v
 process	server.cpp	/^void process(int sockfd)$/;"	f
+reset_oneshot	server.cpp	/^void reset_oneshot(int epollfd, int fd)$/;"	f
+run	log.cpp	/^void LOG::run()$/;"	f	class:LOG
+sem	log.h	/^		sem_t sem;$/;"	m	class:LOG
 sem	server.cpp	/^sem_t sem;$/;"	v
 setnonblocking	server.cpp	/^int setnonblocking(int fd)$/;"	f
+sum1	server.cpp	/^int sum1 = 0, sum2 = 0;$/;"	v
+sum2	server.cpp	/^int sum1 = 0, sum2 = 0;$/;"	v
+testlog	log.cpp	/^void testlog()$/;"	f
+testtime	log.cpp	/^void testtime()$/;"	f
 thread	server.cpp	/^void *thread(void *arg)$/;"	f
+write	log.cpp	/^void LOG::write()$/;"	f	class:LOG
+writebuf	log.cpp	/^void LOG::writebuf(string str)$/;"	f	class:LOG

@@ -85,7 +85,7 @@ void LOG::write()
 	isWriting = false;
 }
 
-void *thread(void *arg)
+static void *thread(void *arg)
 {
 	while(1)
 	{
@@ -95,8 +95,8 @@ void *thread(void *arg)
 		log->write();
 	}
 }
-
-void testtime()
+/*
+static void testtime()
 {
 	time_t t;
 	struct tm *tm1;
@@ -106,7 +106,7 @@ void testtime()
 //	printf("%s", asctime(tm1));
 }
 
-void testlog()
+static void testlog()
 {
 		LOG log;
 	string str("hello world!\n");
@@ -130,12 +130,12 @@ void testlog()
 	}
 
 //	pthread_join( th, (void**)&thread_ret ); 
-}
-
+}*/
+/*
 int main()
 {
 	testtime();
 
 	return 0;
 }
-
+*/

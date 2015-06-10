@@ -20,6 +20,8 @@
 #include <deque>
 #include <semaphore.h>
 
+#include "log.h"
+
 using namespace std;
 using namespace boost;
 

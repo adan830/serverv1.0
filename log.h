@@ -21,6 +21,7 @@ class LOG
 		void append(string str);
 		void writebuf(string str);
 		void write();
+		void run();
 	private:
 		deque<string> buf, buf1;
 		bool flag;
@@ -30,5 +31,7 @@ class LOG
 		bool isWriting;
 		FILE *fp;
 };
+
+static void *thread(void *arg);
 
 #endif
